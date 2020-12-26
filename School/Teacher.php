@@ -6,11 +6,10 @@ class Teacher extends Person
 {
     private $experience;
 
-    public function __construct($name, $age, $experience)
+    public function __construct(string $name, int $age, $experience)
     {
-        $this->name = $name;
-        $this->age = $age;
         $this->experience = $experience;
+        parent::__construct($name, $age);
     }
 
     public function getExperience()

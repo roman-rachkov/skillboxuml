@@ -6,11 +6,10 @@ class Pupil extends Person
 {
     private bool $isAdult;
 
-    public function __construct($name, $age, $isAdult)
+    public function __construct(string $name, int $age, bool $isAdult)
     {
-        $this->name = $name;
-        $this->age = $age;
         $this->isAdult = $isAdult;
+        parent::__construct($name, $age);
     }
 
     public function isAdult(): bool

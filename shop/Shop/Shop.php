@@ -17,10 +17,7 @@ class Shop implements HasMoney
     {
         $arr = $this->products;
         usort($arr, function ($a, $b) {
-            if ($a->getPrice() == $b->getPrice()) {
-                return 0;
-            }
-            return ($a->getPrice() < $b->getPrice()) ? 1 : -1;
+            return $a->getPrice() <=> $b->getPrice();
         });
         return $arr;
     }
